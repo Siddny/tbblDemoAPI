@@ -1,1 +1,1 @@
-web: gunicorn psmsproj.wsgi
+web: gunicorn TechnoBrain.wsgi
