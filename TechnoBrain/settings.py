@@ -85,7 +85,7 @@ if 'postgresql' in os.environ:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql',
-            'NAME': 'psmsapp',
+            'NAME': 'TechnoBrain',
             'USER': 'postgres',
             'PASSWORD': 'sidny',
             'HOST': '127.0.0.1',
