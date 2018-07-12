@@ -1,0 +1,7 @@
+
+env/
+
+db.*
+
+*/migrations/*.py
+*/migrations/*.pyc
