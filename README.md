@@ -15,7 +15,10 @@ source env/bin/activate
 After activating the virtual environment, point to the root folder of this project and run:
 
 pip install -r requirements.txt
+
 python manage.py makemigrations
+
 python manage.py migrate
+
 python manage.py runserver
 
