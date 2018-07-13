@@ -53,13 +53,6 @@ class CsvScriptsView(APIView):
 
 class ScriptView(APIView):
 
-  def get(self, request, format=None):
-    try:
-      scripts = Script.objects.all()
-    except Exception as e:
-      return Response(e, status = status.HTTP_400_BAD_REQUEST)
-    return Response(data=scripts.values(), status = status.HTTP_200_OK)
-
   def post(self, request, format=None):
     """
     {
@@ -85,3 +78,10 @@ class ScriptView(APIView):
     except Exception as e:
       return Response(data={"Error":str(e)}, status = status.HTTP_400_BAD_REQUEST)
     return Response(status=status.HTTP_201_CREATED)
+
+  # def get(self, request, format=None):
+  #   try:
+  #     scripts = Script.objects.all()
+  #   except Exception as e:
+  #     return Response(e, status = status.HTTP_400_BAD_REQUEST)
+  #   return Response(data=scripts.values(), status = status.HTTP_200_OK)
