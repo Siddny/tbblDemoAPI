@@ -134,7 +134,10 @@ class ClientDetailsView(generics.ListAPIView):
 	# 		return Response({"Error": str(e)}, status = status.HTTP_400_BAD_REQUEST)
 	# 	return Response(data=client, status = status.HTTP_200_OK)
 
-class ClientsView(APIView):
+
+class ClientsView(generics.ListCreateAPIView):
+	queryset = Client.objects.all()
+	serializer_class = ClientSerializer
 	"""
 	{
 		"name": "sidney kiprono",
