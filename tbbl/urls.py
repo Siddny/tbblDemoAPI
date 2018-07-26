@@ -7,4 +7,6 @@ urlpatterns = [
     url(r'^csvs/', CsvScriptsView.as_view()),
     
     url(r'^clients/', ClientsView.as_view()),
+    url(r'client/(?P<pk>[0-9]+)/$', ClientDetailsView.as_view()),
+
 ]

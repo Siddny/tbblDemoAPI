@@ -22,10 +22,14 @@ class Script(models.Model):
 	q8 = models.CharField(max_length=100, null=True, blank=True)
 	q9 = models.CharField(max_length=100, null=True, blank=True)
 	q10 = models.CharField(max_length=100, null=True, blank=True)
-	q11 = models.CharField(max_length=100, null=True, blank=True)
+	q11email = models.CharField(max_length=100, null=True, blank=True)
+	q12 = models.CharField(max_length=100, null=True, blank=True)
 	dispose = models.CharField(max_length=100, null=True, blank=True)
 	othersystems = models.CharField(max_length=100, null=True, blank=True)
 	timetocall = models.CharField(max_length=100, null=True, blank=True)
+	escalation = models.CharField(max_length=100, null=True, blank=True)
+	email = models.CharField(max_length=100, null=True, blank=True)
+	phone = models.CharField(max_length=100, null=True, blank=True)
 
 	class Meta:
 		db_table = "Script"
