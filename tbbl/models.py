@@ -1,6 +1,15 @@
 from django.db import models
 
 # Create your models here.
+class Client(models.Model):
+	name = models.CharField(max_length=100, null=True, blank=True)
+	email = models.CharField(max_length=100, null=True, blank=True)
+	phone = models.CharField(max_length=100, null=True, blank=True)
+
+	class Meta:
+		db_table = "Client"
+		verbose_name = "Client"
+		verbose_name_plural = "Clients"
 
 class Script(models.Model):
 	q1 = models.CharField(max_length=100, null=True, blank=True)
@@ -25,3 +34,5 @@ class Script(models.Model):
 
 	# def __str__ (self):
 	# 	return self.q1
+
+

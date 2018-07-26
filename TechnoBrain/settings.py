@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'tbbl',
+    # 'sendgrid',
 ]
 
 MIDDLEWARE = [
@@ -58,6 +59,13 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     
 ]
+
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'sidnykiprono@gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_PASSWORD = '1kazanga1'
 
 ROOT_URLCONF = 'TechnoBrain.urls'
 
@@ -160,3 +168,8 @@ CORS_ALLOW_METHODS = (
 )
 
 CORS_ORIGIN_ALLOW_ALL = True
+
+# SENDGRID_EMAIL_HOST = "smtp.sendgrid.net"
+# SENDGRID_EMAIL_PORT = 587
+# SENDGRID_EMAIL_USERNAME = "sidny"
+# SENDGRID_EMAIL_PASSWORD = "1kazanga1"

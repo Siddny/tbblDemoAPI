@@ -5,4 +5,6 @@ from tbbl.views import *
 urlpatterns = [
     url(r'^scripts/', ScriptView.as_view()),
     url(r'^csvs/', CsvScriptsView.as_view()),
+    
+    url(r'^clients/', ClientsView.as_view()),
 ]
