@@ -138,50 +138,50 @@ class ClientDetailsView(generics.ListAPIView):
 class ClientsView(generics.ListCreateAPIView):
 	queryset = Client.objects.all()
 	serializer_class = ClientSerializer
-	"""
-	{
-		"name": "sidney kiprono",
-		"email": "mail@mail.com",
-		"phone": "+254700021447"
-	}
-	"""
-	def get(self, request, format=None):
-		try:
-			clients = Client.objects.all().values()
-		except Exception as e:
-			return Response({"Error": str(e)}, status = status.HTTP_400_BAD_REQUEST)
-		return Response(data=clients, status = status.HTTP_200_OK)
+	# """
+	# {
+	# 	"name": "sidney kiprono",
+	# 	"email": "mail@mail.com",
+	# 	"phone": "+254700021447"
+	# }
+	# """
+	# def get(self, request, format=None):
+	# 	try:
+	# 		clients = Client.objects.all().values()
+	# 	except Exception as e:
+	# 		return Response({"Error": str(e)}, status = status.HTTP_400_BAD_REQUEST)
+	# 	return Response(data=clients, status = status.HTTP_200_OK)
 
-	def post(self, request, format=None):
-		print(request.data)
-		try:
-			client = Client.objects.create(
-				name = request.data['name'],
-				email = request.data['email'],
-				phone = request.data['phone']
-				)
-		except Exception as e:
-			return Response({"Error": str(e)}, status = status.HTTP_400_BAD_REQUEST)
-		# try:
-		# 	subject = 'Test subject'
-		# 	message = 'Hi, there is an Escalation, Kindly look in to it asap'
-		# 	mail_sent_to_org = send_mail(
-		# 		subject,
-		# 		message,
-		# 		"sidneykipronoh@gmail.com",
-		# 		['cdohzangah@gmail.com']### TODO:
-		# 	)
-		# except Exception as e:
-		# 	return Response({"Error": str(e)}, status = status.HTTP_400_BAD_REQUEST)
+	# def post(self, request, format=None):
+	# 	print(request.data)
+	# 	try:
+	# 		client = Client.objects.create(
+	# 			name = request.data['name'],
+	# 			email = request.data['email'],
+	# 			phone = request.data['phone']
+	# 			)
+	# 	except Exception as e:
+	# 		return Response({"Error": str(e)}, status = status.HTTP_400_BAD_REQUEST)
+	# 	# try:
+	# 	# 	subject = 'Test subject'
+	# 	# 	message = 'Hi, there is an Escalation, Kindly look in to it asap'
+	# 	# 	mail_sent_to_org = send_mail(
+	# 	# 		subject,
+	# 	# 		message,
+	# 	# 		"sidneykipronoh@gmail.com",
+	# 	# 		['cdohzangah@gmail.com']### TODO:
+	# 	# 	)
+	# 	# except Exception as e:
+	# 	# 	return Response({"Error": str(e)}, status = status.HTTP_400_BAD_REQUEST)
 
-		# try:
-		# 	username = "sandbox"    
-		# 	api_key = "bda966b554f93447c629953953c3a362f0fe21bb922943ba234f25f61435c56b"
-		# 	africastalking.initialize(username, api_key)
-		# 	sms = africastalking.SMS
-		# 	response = sms.send("Hello Test Escalation!", ["+254700021447"])
-		# 	print(response)
+	# 	# try:
+	# 	# 	username = "sandbox"    
+	# 	# 	api_key = "bda966b554f93447c629953953c3a362f0fe21bb922943ba234f25f61435c56b"
+	# 	# 	africastalking.initialize(username, api_key)
+	# 	# 	sms = africastalking.SMS
+	# 	# 	response = sms.send("Hello Test Escalation!", ["+254700021447"])
+	# 	# 	print(response)
 
-		# except Exception as e:
-		# 	return Response(data={"Error 2":str(e)}, status = status.HTTP_400_BAD_REQUEST)
-		return Response(data=client, status=status.HTTP_201_CREATED)
+	# 	# except Exception as e:
+	# 	# 	return Response(data={"Error 2":str(e)}, status = status.HTTP_400_BAD_REQUEST)
+	# 	return Response(data=client, status=status.HTTP_201_CREATED)
