@@ -9,7 +9,7 @@ django-extensions==2.0.7
 django-filter==1.1.0
 django-sendgrid==1.0.1
 django-toolbelt==0.0.1
-djangorestframework==3.8.2
+djangorestframework==3.11.2
 gunicorn==19.7.1
 idna==2.7
 Markdown==2.6.11
